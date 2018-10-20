@@ -8,7 +8,7 @@ def timed(f):
         print("Function {} took {} to execute.".format(f.__name__, t2 - t1))
     return wrapper
 
-def time_sort(f, a):
-    t1 = datetime.datetime.now()
-    f(a)
-    return datetime.datetime.now() - t1
+def time_function(f, *args, **kwargs):
+    t = datetime.datetime.now()
+    f(*args, **kwargs)
+    return datetime.datetime.now() - t
