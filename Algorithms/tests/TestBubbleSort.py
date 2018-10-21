@@ -1,8 +1,8 @@
 import unittest
 import random
 import datetime
-from bubblesort import bubblesort
-from mergesort import mergesort
+from sorting.bubblesort import bubblesort
+from sorting.mergesort import mergesort
 
 class TestBubbleSort(unittest.TestCase):
 
@@ -19,6 +19,12 @@ class TestBubbleSort(unittest.TestCase):
         l = [ random.randint(-1000, 1001) for i in range(10000) ]
         self.assertEqual(bubblesort(l), sorted(l))
     
+    def test_empty_list(self):
+        self.assertEqual(bubblesort([]), [])
+
+    def test_single_element_list(self):
+        self.assertEqual(bubblesort([1]), [1])
+
     def test_slower_than_mergesort(self):
         l = [ random.randint(-1000, 1001) for i in range(10000) ]
         t1 = datetime.datetime.now()
