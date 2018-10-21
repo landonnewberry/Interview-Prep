@@ -1,5 +1,5 @@
 import unittest
-from algorithms.sorting.mergesort import mergesort
+from Algorithms.sorting.mergesort import mergesort
 import random
 import datetime
 
