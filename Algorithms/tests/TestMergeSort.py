@@ -1,15 +1,7 @@
 import unittest
-from sorting.mergesort import mergesort
+from algorithms.sorting.mergesort import mergesort
 import random
 import datetime
-
-def timed(f):
-    def wrapper():
-        t1 = datetime.datetime.now()
-        f()
-        t2 = datetime.datetime.now()
-        print("Function {} took {} to execute.".format(f.__name__, t2 - t1))
-    return wrapper
 
 class TestMergeSort(unittest.TestCase):
 

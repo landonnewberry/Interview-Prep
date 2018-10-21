@@ -1,6 +1,6 @@
 from array import array
 
-class HashTable(object):
+class HashSet(object):
     
     @staticmethod
     def _default_hash(n):
@@ -29,7 +29,7 @@ class HashTable(object):
                 i += 1
         self._array[i] = n
 
-    def exists(self, n):
+    def contains(self, n):
         i = o = self._hash_function(n) % self.size
         while self._array[i] != n:
             if i == (self.size - 1):
@@ -40,4 +40,12 @@ class HashTable(object):
                 return False
             else:
                 i += 1
-        return True 
+        return True
+
+    def remove(self, n):
+        if self.contains(n):
+            i = self._hash_function(n) % self.size
+            while self._array[i] != n:
+                i = 0 if i == (self.size - 1) else i + 1
+            self._array[i] = 0
+    

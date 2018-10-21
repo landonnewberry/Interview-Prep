@@ -1,8 +1,8 @@
 import unittest
 import random
 import datetime
-from sorting.bubblesort import bubblesort
-from sorting.mergesort import mergesort
+from algorithms.sorting.bubblesort import bubblesort
+from algorithms.sorting.mergesort import mergesort
 
 class TestBubbleSort(unittest.TestCase):
 
