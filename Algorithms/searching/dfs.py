@@ -1,6 +1,5 @@
 from pprint import pprint
 
-# test has max_connection == 9
 test = [['O','O','X','O'],
         ['X','X','O','X'],
         ['O','O','O','X'],
